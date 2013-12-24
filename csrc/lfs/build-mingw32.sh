@@ -1,3 +1,3 @@
-gcc lfs.c -O3 -s -shared -o ../../bin/lfs.dll -I../lua -L../../bin -llua51
+gcc lfs.c -O3 -s -shared -o ../../bin/mingw32/lfs.dll -I../lua -L../../bin/mingw32 -llua51
 
-../../bin/luajit lfs_test.lua
+#../../bin/luajit lfs_test.lua

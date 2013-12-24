@@ -1,3 +1,3 @@
-gcc lfs.c -O3 -s -shared -o ../../linux/bin/lfs.so -I../lua
+gcc lfs.c -O3 -s -shared -o ../../bin/linux32/lfs.so -I../lua
 
-../../linux/bin/luajit lfs_test.lua
+#../../linux/bin/luajit lfs_test.lua
