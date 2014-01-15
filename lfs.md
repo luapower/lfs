@@ -1,7 +1,6 @@
 ---
 project:     lfs
 tagline:     Filesystem support beyond ANSI C
-category:    OS
 ---
 
 ## `local lfs = require'lfs'`
