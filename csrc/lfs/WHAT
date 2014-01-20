@@ -1,3 +1,4 @@
 LuaFileSystem 1.6.2 from https://github.com/keplerproject/luafilesystem.git (MIT License)
+requires: lua-headers, luajit
 
 NOTE: lfs.link crashes on Windows (commented the test)
