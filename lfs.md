@@ -1,6 +1,6 @@
 ---
-project:     lfs
-tagline:     Filesystem support beyond ANSI C
+project: lfs
+tagline: filesystem support (LuaFileSystem)
 ---
 
 ## `local lfs = require'lfs'`
