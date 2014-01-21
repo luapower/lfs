@@ -1,6 +1,6 @@
 ---
 project: lfs
-tagline: filesystem support (LuaFileSystem)
+tagline: filesystem support
 ---
 
 ## `local lfs = require'lfs'`
