@@ -1,0 +1,14 @@
+*
+!/bin/
+!/csrc/
+!/bin/mingw32/
+!/bin/linux32/
+!/media/
+!/bin/mingw32/clib/
+!/bin/linux32/clib/
+
+!/lfs*
+!/bin/mingw32/clib/lfs*
+!/bin/linux32/clib/lfs*
+!/csrc/lfs/
+!/csrc/lfs/**
