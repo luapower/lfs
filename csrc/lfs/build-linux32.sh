@@ -1,1 +1,1 @@
-gcc -O2 -s -static-libgcc lfs.c -shared -o ../../bin/linux32/clib/lfs.so -I../lua
+P=linux32 L="-s -static-libgcc" D=lfs.so A=liblfs.a ./build.sh

@@ -1,1 +1,1 @@
-gcc -arch x86_64 -O2 lfs.c -shared -o ../../bin/osx64/clib/lfs.so -I../lua -undefined dynamic_lookup
+P=osx64 C="-arch x86_64" L="-arch x86_64 -undefined dynamic_lookup" D=lfs.so A=liblfs.a ./build.sh

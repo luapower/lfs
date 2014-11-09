@@ -1,1 +1,1 @@
-gcc -O2 -s -static-libgcc lfs.c -shared -o ../../bin/mingw64/clib/lfs.dll -I../lua -L../../bin/mingw64 -llua51
+P=mingw64 L="-s -static-libgcc -llua51" D=lfs.dll A=lfs.a ./build.sh
