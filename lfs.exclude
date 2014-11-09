@@ -22,5 +22,11 @@
 !/bin/linux64/clib/lfs*
 !/bin/osx32/clib/lfs*
 !/bin/osx64/clib/lfs*
+!/bin/mingw32/lfs*
+!/bin/mingw64/lfs*
+!/bin/linux32/liblfs*
+!/bin/linux64/liblfs*
+!/bin/osx32/liblfs*
+!/bin/osx64/liblfs*
 !/csrc/lfs/
 !/csrc/lfs/**
