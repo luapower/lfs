@@ -1,5 +1,4 @@
 ---
-project: lfs
 tagline: filesystem support
 ---
 
