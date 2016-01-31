@@ -4,37 +4,55 @@ tagline: filesystem support
 
 ## `local lfs = require'lfs'`
 
-A distribution of [luafilesystem].
+A distribution of [LuaFileSystem].
 
-[luafilesystem]: http://keplerproject.github.io/luafilesystem/
+[LuaFileSystem]: http://keplerproject.github.io/luafilesystem/
 
 ## API
 
 ------------------------------------------------------------- -------------------------------------------------------------
-`lfs.attributes(filepath) -> t | nil,err` \                   get all file attributes
+`lfs.attributes(filepath) -> t | nil,err`                     get all file attributes
+
 `lfs.attributes(filepath, attr) -> val | nil,err`             get a specific file attribute
+
 `lfs.currentdir() -> s | nil,err`                             get the current working directory
+
 `lfs.chdir(path) -> true | nil,err`                           change the current working directory
-`lfs.dir(path) -> iter, dir_obj` \                            get a directory iterator (to use with `for`)
+
+`lfs.dir(path) -> iter, dir_obj`                              get a directory iterator (to use with `for`)
+
 `iter(dir_obj) -> dirname | nil`                              explicit iteration
+
 `dir_obj:next() -> dirname | nil`                             explicit iteration
+
 `dir_obj:close()`                                             close the iterator
+
 `lfs.lock_dir(path, [timeout]) -> lf | nil,err`               check/create `lockfile.lfs` in `path`
+
 `lf:free()`                                                   free the lockfile
-`lfs.lock(file, 'r'|'w'[, start[, len]]) \                    lock (parts of) a file in shared ('r') \
+
+`lfs.lock(file, 'r'|'w'[, start[, len]])                      lock (parts of) a file in shared ('r')
 -> true | nil,err`                                            or exclusive ('w') mode
-`lfs.unlock (file[, start[, len]]) \                          unlock (parts of) a file
+
+`lfs.unlock (file[, start[, len]])                            unlock (parts of) a file
 -> true | nil,err`
+
 `lfs.link(old, new[, symlink])`                               create a hard (or symbolic) link
+
 `lfs.mkdir(dirname) -> true | nil,err`                        create a directory
+
 `lfs.rmdir(dirname) -> true | nil,err`                        remove an empty directory
+
 `lfs.setmode(file, mode) -> true,lastmode | nil,err`          set the writing mode ('binary' or 'text')
+
 `lfs.symlinkattributes(filepath) -> t | nil,err`
+
 `lfs.symlinkattributes(filepath, attr) -> val | nil,err`      like `lfs.attributes` but for the link file (not on Windows)
+
 `lfs.touch(filepath [, atime [, mtime]]) -> true | nil,err`   set atime and mtime of file to specified or current time
 ------------------------------------------------------------- -------------------------------------------------------------
 
-`lfs.attributes` fields:
+### `lfs.attributes()` attributes:
 
 --------------- -------------------------------------------------------------------
 `dev`           device number (Unix) or drive number (Windows)
