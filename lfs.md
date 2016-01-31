@@ -10,6 +10,7 @@ A distribution of [LuaFileSystem].
 
 ## API
 
+
 `lfs.attributes(path[, attr]) -> t | val | nil,err`
   ~ get all file attributes or a specific attribute (see below)
 `lfs.symlinkattributes(path[, attr]) -> t | val | nil,err`
