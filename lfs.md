@@ -11,9 +11,9 @@ A distribution of [LuaFileSystem].
 ## API
 
 ------------------------------------------------------------- -------------------------------------------------------------
-`lfs.attributes(filepath) -> t | nil,err`                     get all file attributes
+`lfs.attributes(filepath) -> t | nil,err`                     get all file attributes (see below)
 
-`lfs.attributes(filepath, attr) -> val | nil,err`             get a specific file attribute
+`lfs.attributes(filepath, attr) -> val | nil,err`             get a specific file attribute (see below)
 
 `lfs.currentdir() -> s | nil,err`                             get the current working directory
 
@@ -52,7 +52,7 @@ A distribution of [LuaFileSystem].
 `lfs.touch(filepath [, atime [, mtime]]) -> true | nil,err`   set atime and mtime of file to specified or current time
 ------------------------------------------------------------- -------------------------------------------------------------
 
-### `lfs.attributes()` attributes:
+### file attributes:
 
 --------------- -------------------------------------------------------------------
 `dev`           device number (Unix) or drive number (Windows)
