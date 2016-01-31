@@ -13,9 +13,9 @@ A distribution of [LuaFileSystem].
 
 
 `lfs.attributes(path[, attr]) -> t | val | nil,err`
-  ~ get all file attributes or a specific attribute (see below)
+    : get all file attributes or a specific attribute (see below)
 `lfs.symlinkattributes(path[, attr]) -> t | val | nil,err`
-  ~ like `lfs.attributes` but for the link file (not on Windows)
+    : like `lfs.attributes` but for the link file (not on Windows)
 
 
 
