@@ -43,7 +43,7 @@ __locking__
 
 `lfs.lock_dir(path, [timeout]) -> lockfile | nil,err`         check/create `lockfile.lfs` in `path`
 
-`lockfile:free()`                                             free the lockfile
+`lockfile:free()`                                             release the lockfile
 
 `lfs.lock(file, 'r'|'w'[, start[, len]])                      lock (parts of) an opened file in shared ('r')
 -> true | nil,err`                                            or exclusive ('w') mode
