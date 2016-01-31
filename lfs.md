@@ -2,11 +2,11 @@
 tagline: filesystem support
 ---
 
-> **NOTE:** This is just a distribution of lfs. lfs is developed [here][lfs site].
+## `local lfs = require'lfs'`
+
+A distribution of luafilesystem, which is developed [here][lfs site].
 
 [lfs site]: http://keplerproject.github.io/luafilesystem/
-
-## `local lfs = require'lfs'`
 
 ## API
 
