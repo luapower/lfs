@@ -4,9 +4,9 @@ tagline: filesystem support
 
 ## `local lfs = require'lfs'`
 
-A distribution of luafilesystem, which is developed [here][lfs site].
+A distribution of [luafilesystem].
 
-[lfs site]: http://keplerproject.github.io/luafilesystem/
+[luafilesystem]: http://keplerproject.github.io/luafilesystem/
 
 ## API
 
