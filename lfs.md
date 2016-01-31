@@ -11,13 +11,19 @@ A distribution of [LuaFileSystem].
 ## API
 
 ------------------------------------------------------------- -------------------------------------------------------------
-`lfs.attributes(filepath) -> t | nil,err`                     get all file attributes (see below)
+__file attributes__
 
-`lfs.attributes(filepath, attr) -> val | nil,err`             get a specific file attribute (see below)
+`lfs.attributes(path[, attr]) -> t | val | nil,err`           get all file attributes or a specific attribute (see below)
 
-`lfs.currentdir() -> s | nil,err`                             get the current working directory
+`lfs.symlinkattributes(path[, attr]) -> t | val | nil,err`    like `lfs.attributes` but for the link file (not on Windows)
 
-`lfs.chdir(path) -> true | nil,err`                           change the current working directory
+__current directory__
+
+`lfs.currentdir() -> s | nil,err`                             get the current directory
+
+`lfs.chdir(path) -> true | nil,err`                           change the current directory
+
+__directory iteration__
 
 `lfs.dir(path) -> iter, dir_obj`                              get a directory iterator (to use with `for`)
 
@@ -27,29 +33,30 @@ A distribution of [LuaFileSystem].
 
 `dir_obj:close()`                                             close the iterator
 
+__directory operations__
+
+`lfs.mkdir(dirname) -> true | nil,err`                        create a directory (if the parent exists)
+
+`lfs.rmdir(dirname) -> true | nil,err`                        remove an empty directory
+
+__locking__
+
 `lfs.lock_dir(path, [timeout]) -> lf | nil,err`               check/create `lockfile.lfs` in `path`
 
 `lf:free()`                                                   free the lockfile
 
-`lfs.lock(file, 'r'|'w'[, start[, len]])                      lock (parts of) a file in shared ('r')
+`lfs.lock(file, 'r'|'w'[, start[, len]])                      lock (parts of) an opened file in shared ('r')
 -> true | nil,err`                                            or exclusive ('w') mode
 
-`lfs.unlock (file[, start[, len]])                            unlock (parts of) a file
+`lfs.unlock(file[, start[, len]])                             unlock (parts of) an opened file
 -> true | nil,err`
 
-`lfs.link(old, new[, symlink])`                               create a hard (or symbolic) link
+__misc.__
 
-`lfs.mkdir(dirname) -> true | nil,err`                        create a directory
-
-`lfs.rmdir(dirname) -> true | nil,err`                        remove an empty directory
+`lfs.touch(path[, atime [, mtime]]) -> true | nil,err`        set atime and mtime of file to specified or current time
 
 `lfs.setmode(file, mode) -> true,lastmode | nil,err`          set the writing mode ('binary' or 'text')
 
-`lfs.symlinkattributes(filepath) -> t | nil,err`
-
-`lfs.symlinkattributes(filepath, attr) -> val | nil,err`      like `lfs.attributes` but for the link file (not on Windows)
-
-`lfs.touch(filepath [, atime [, mtime]]) -> true | nil,err`   set atime and mtime of file to specified or current time
 ------------------------------------------------------------- -------------------------------------------------------------
 
 ### file attributes:
